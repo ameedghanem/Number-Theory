@@ -20,6 +20,8 @@ I implemented in this module various algorithms taught in the number theory cour
 11) convert a continued fraction into a rational value
 12) convert a rational value into a continued fraction
 13) Pell equation
+14) finding inverse modulu p
+15) finding premitive root
 
 """
 
