@@ -1,4 +1,4 @@
-import os, sys
+import sys
 import logging
 from math import floor
 
@@ -12,15 +12,15 @@ I implemented in this module various algorithms taught in the number theory cour
 3) Diophantine equation
 4) Modular Exponentiation
 5) Legendre symbol
-6) square root modulo p
-7) quadratic modular equation
-8) chinese remainder theorem
-9) the cycle of fraction of 1/p where p is a prime number
-10) the euler totient function. phi
-11) convert a continued fraction into a rational value
-12) convert a rational value into a continued fraction
-13) Pell equation
-14) finding inverse modulu p
+6) inverse modulo p
+7) finding square root modulo p
+8) check if a quadratic equation is solvable
+9) chinese remainder theorem
+10) the cycle of fraction of 1/p where p is a prime number
+11) the euler totient function. phi
+12) convert a continued fraction into a rational value
+13) convert a rational value into a continued fraction
+14) Pell equation
 15) finding premitive root
 
 """
@@ -97,11 +97,8 @@ def q_equation(a, b, c, p):
 	desc = b**2 - 4*a*c
 	num_of_sols = legendre(desc, p)+1
 	if num_of_sols == 0:
-		return None
-	root_desc = naive_sq_root(desc, p)
-	sols.append(((-b + root_desc)*inverse(2*a, p)) % p)
-	sols.append(((-b - root_desc)*inverse(2*a, p)) % p)
-	return sols[0], sols[1]
+		return False
+	return True
 
 
 def crt(a, b):
