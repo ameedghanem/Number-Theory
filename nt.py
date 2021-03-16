@@ -27,12 +27,14 @@ I implemented in this module various algorithms taught in the number theory cour
 
 
 def gcd(a, b):
+	""" computes the gcd of a and b """
 	if b == 0:
 		return a
 	return gcd(b, a%b)
 	
 
 def xgcd(a, b):
+	""" computes the gcd and finds x,y s.t. aX + bY = gcd(a,b) """
 	if b == 0:
 		return a, 1, 0
 	g, x, y = xgcd(b, a%b)
@@ -42,6 +44,7 @@ def xgcd(a, b):
 
 
 def d_equation(a, b, c):
+	""" solves the diaphontine equation: aX + bY = c """
 	g, x, y = xgcd(a, b)
 	if c%g == 0:
 		factor = c//g
@@ -49,6 +52,7 @@ def d_equation(a, b, c):
 	return None
 
 def my_pow(a, b, p):
+	""" computes a**b % p in O(log(p)) """
 	
 	def my_pow_rec(a, b, p):
 		if b == 0:
@@ -64,6 +68,7 @@ def my_pow(a, b, p):
 
 
 def legendre(a, p):
+	""" computes the legendre symbol (a/p) """
 	sign = my_pow(a, (p-1)//2, p)
 	if sign == p-1:
 		return -1
@@ -79,6 +84,7 @@ def sq_root(a, p):
 
 
 def naive_sq_root(a, p):
+	""" compues the square root of a modulo p """
 	sols = []
 	for i in range(p):
 		if i**2 % p == a:
@@ -87,6 +93,7 @@ def naive_sq_root(a, p):
 
 
 def inverse(a, p):
+	""" comutes a**(-1) modulo p """
 	sols = d_equation(a, p, 1)
 	return sols[0]%p
 
@@ -116,6 +123,7 @@ def crt(a, b):
 
 
 def find_cycle_of_1_over_prime(p):
+	""" find the cycle of the fraction 1/p where p is a prime number """
 	ord = 1
 	for i in range(1,phi(p)+1):
 		if 10**i % p == 1:
@@ -129,6 +137,10 @@ def find_cycle_of_1_over_prime(p):
 
 
 def phi(n):
+	"""
+	Euler totient function. computes how many numbers realtivly prime to n.
+	Which means it computes #{x | gcd(x,n) = 1}
+	"""
 	res = n
 	p = 2
 	while p*p <= n:
@@ -143,6 +155,7 @@ def phi(n):
 	
 
 def get_premitive_roots(n):
+	""" finds all premitive roots  of n """
 	phi_n = phi(n)
 	phi_phi_n = phi(phi_n)
 
