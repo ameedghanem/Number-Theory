@@ -3,6 +3,8 @@ import logging
 from math import floor
 
 """
+@Author: Ameed S. Ghanem
+
 
 Number Theory Algorithms.
 I implemented in this module various algorithms taught in the number theory course.
