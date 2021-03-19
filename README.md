@@ -14,6 +14,6 @@ I implemented various **number theory algorithms** such as:
  - compute the cycle of the fraction 1/p where p is a prime nmber
  - the [continued fraction](https://en.wikipedia.org/wiki/Continued_fraction) of sqrt(d) where d is not a perfect square
  - compute the rational number from a [continued fraction](https://en.wikipedia.org/wiki/Continued_fraction)
- - solve [pell equation](https://en.wikipedia.org/wiki/Pell%27s_equation)
- - [sieve of eratothenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
- - [factorization](https://en.wikipedia.org/wiki/Integer_factorization)
+ - solve [Pell equation](https://en.wikipedia.org/wiki/Pell%27s_equation)
+ - [Sieve of Eratothenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+ - [Factorization](https://en.wikipedia.org/wiki/Integer_factorization)
