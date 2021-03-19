@@ -1,5 +1,6 @@
 ## Number-Theory
-
+![](https://github.com/ameedghanem/Number-Theory/blob/main/logo/nt2.jpg)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 I implemented various **Number Theory algorithms** such as:
  - GCD - [the euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm#:~:text=In%20mathematics%2C%20the%20Euclidean%20algorithm,them%20both%20without%20a%20remainder.&text=When%20that%20occurs%2C%20they%20are,of%20the%20original%20two%20numbers.)
  - [LCM](https://en.wikipedia.org/wiki/Least_common_multiple)
