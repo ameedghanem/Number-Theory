@@ -208,6 +208,9 @@ def pell_equation(d, a=1):
 		ret_y = 2*x*y
 		return int(ret_x), int(ret_y)
 
+	if d < 0:
+		print("Illegal d value")
+		return None	
 	root = d**0.5
 	if root == int(root):
 		print("Illegal d value")
