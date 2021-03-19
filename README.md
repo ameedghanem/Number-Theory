@@ -11,6 +11,7 @@ I implemented various **number theory algorithms** such as:
  - [Euler totient function - phi](https://en.wikipedia.org/wiki/Euler%27s_totient_function)
  - [root square modulo p](https://en.wikipedia.org/wiki/Quadratic_residue)
  - number of solution of quadrtic equation over Z/Zp
+ - [Chinese reamainer theorem (CRT)](https://en.wikipedia.org/wiki/Chinese_remainder_theorem)
  - compute the cycle of the fraction 1/p where p is a prime nmber
  - the [continued fraction](https://en.wikipedia.org/wiki/Continued_fraction) of sqrt(d) where d is not a perfect square
  - compute the rational number from a [continued fraction](https://en.wikipedia.org/wiki/Continued_fraction)
