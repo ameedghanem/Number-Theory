@@ -2,6 +2,7 @@
 
 I implemented various **number theory algorithms** such as:
  - GCD - [the euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm#:~:text=In%20mathematics%2C%20the%20Euclidean%20algorithm,them%20both%20without%20a%20remainder.&text=When%20that%20occurs%2C%20they%20are,of%20the%20original%20two%20numbers.)
+ - [LCM](https://en.wikipedia.org/wiki/Least_common_multiple)
  - [The extended euclidean algorithm](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#:~:text=This%20is%20a%20certifying%20algorithm,by%20their%20greatest%20common%20divisor.)
  - [Diophantine equation](https://en.wikipedia.org/wiki/Diophantine_equation)
  - [inverse modulo p](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
@@ -14,3 +15,5 @@ I implemented various **number theory algorithms** such as:
  - the [continued fraction](https://en.wikipedia.org/wiki/Continued_fraction) of sqrt(d) where d is not a perfect square
  - compute the rational number from a [continued fraction](https://en.wikipedia.org/wiki/Continued_fraction)
  - solve [pell equation](https://en.wikipedia.org/wiki/Pell%27s_equation)
+ - [sieve of eratothenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+ - [factorization](https://en.wikipedia.org/wiki/Integer_factorization)
