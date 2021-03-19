@@ -24,6 +24,9 @@ I implemented in this module various algorithms taught in the number theory cour
 13) convert a rational value into a continued fraction
 14) Pell equation
 15) finding premitive root
+16) lcm
+17) sieve of eratosthenes
+18) factoring a number to it's prime factors
 
 """
 
@@ -33,7 +36,12 @@ def gcd(a, b):
 	if b == 0:
 		return a
 	return gcd(b, a%b)
-	
+
+
+def lcm(a, b):
+    """ returns leam common multiplicity (lcm) of a and b """
+    return a*b//gcd(a,b)
+
 
 def xgcd(a, b):
 	""" computes the gcd and finds x,y s.t. aX + bY = gcd(a,b) """
@@ -219,3 +227,52 @@ def pell_equation(d, a=1):
 		
 	x, y = get_sol_from_odd_eq(x, y)
 	return x, y
+
+
+def sieve(n):
+    """
+    Sieve of Eratosthenes: returns a boolean list
+    list[i]=True means i+1 is a prime number
+    lit[i]=False means i+1 is a composite number
+    """
+    isPrime = [True for i in range(n+1)]
+    isPrime[0], isPrime[1] = False, False
+    i = 2
+    while i**2 <= n:
+        if isPrime[i]:
+            j = i**2
+            while j <= n:
+                isPrime[j] = False
+                j += i
+        i += 1
+    return isPrime[1:]
+
+
+def factorize(n, to_print=False):
+    """ return all prime factors of n. if to_print=True it prints n's all prime factors """
+    factors = []
+    pwr = 0 # this will hold how many each prime appears in n
+    while n%2 == 0:
+        if to_print:
+            print(2, end=' ')
+        pwr += 1
+        n /= 2
+    if pwr > 0:
+        factors.append((2, pwr))
+    j = 3
+    while j <= int(n**0.5)+1:
+        pwr = 0
+        while n%j == 0:
+            if to_print:
+                print(j, end=' ')
+            pwr += 1
+            n /= j
+        if pwr > 0:
+            factors.append((j, pwr))
+        j += 2
+    if n > 2:
+        factors.append((int(n), 1))
+    if to_print:
+        print(int(n))       
+    return factors
+
