@@ -14,19 +14,20 @@ I implemented in this module various algorithms taught in the number theory cour
 3) Diophantine equation
 4) Modular Exponentiation
 5) Legendre symbol
-6) inverse modulo p
-7) finding square root modulo p
-8) check if a quadratic equation is solvable
-9) chinese remainder theorem
-10) the cycle of fraction of 1/p where p is a prime number
-11) the euler totient function. phi
-12) convert a continued fraction into a rational value
-13) convert a rational value into a continued fraction
-14) Pell equation
-15) finding premitive root
-16) lcm
-17) sieve of eratosthenes
-18) factoring a number to it's prime factors
+6) Jacobi symbol
+7) inverse modulo p
+8) finding square root modulo p
+9) check if a quadratic equation is solvable
+10) chinese remainder theorem
+11) the cycle of fraction of 1/p where p is a prime number
+12) the euler totient function. phi
+13) convert a continued fraction into a rational value
+14) convert a rational value into a continued fraction
+15) Pell equation
+16) finding premitive root
+17) lcm
+18) sieve of eratosthenes
+19) factoring a number to it's prime factors
 
 """
 
@@ -79,9 +80,25 @@ def my_pow(a, b, p):
 
 def legendre(a, p):
 	""" computes the legendre symbol (a/p) """
+	if a%p == 0:
+		return 0
 	sign = my_pow(a, (p-1)//2, p)
 	if sign == p-1:
 		return -1
+	return sign
+
+
+def jacobi(a, p):
+	""" computes the jacobi symbol (a/p) """
+	if a%p == 0:
+		return 0
+	if p%2 == 0:
+		print("p must be an odd")
+		return
+	sign = 1
+	factors = factorize(a)
+	for q, r in factors:
+		sign *= legendre(q, p)
 	return sign
 
 
