@@ -145,6 +145,8 @@ def crt(a, b):
 	""" for each i:  x = a[i] mod b[i]  """
 
 	assert len(a) == len(b)
+	if a == []:
+		return None
 	l = len(a)
 	mod = 1
 	for num in b:
