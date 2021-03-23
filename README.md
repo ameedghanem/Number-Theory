@@ -6,7 +6,7 @@ I implemented various **Number Theory algorithms** such as:
  - [LCM](https://en.wikipedia.org/wiki/Least_common_multiple)
  - [The extended euclidean algorithm](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#:~:text=This%20is%20a%20certifying%20algorithm,by%20their%20greatest%20common%20divisor.)
  - [Diophantine equation](https://en.wikipedia.org/wiki/Diophantine_equation)
- - [inverse modulo p](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
+ - [Inverse modulo p](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
  - Given a, b, p [compute a^b mod p](https://en.wikipedia.org/wiki/Exponentiation_by_squaring#:~:text=Unsourced%20material%20may%20be%20challenged%20and%20removed.&text=In%20mathematics%20and%20computer%20programming,polynomial%20or%20a%20square%20matrix.)
  - [Legendre symbol](https://en.wikipedia.org/wiki/Legendre_symbol)
  - [Jacobi symbol](https://en.wikipedia.org/wiki/Jacobi_symbol)
