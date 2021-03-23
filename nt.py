@@ -80,6 +80,9 @@ def my_pow(a, b, p):
 
 def legendre(a, p):
 	""" computes the legendre symbol (a/p) """
+	if p == 2:
+		print("undefined")
+		return None
 	if a%p == 0:
 		return 0
 	sign = my_pow(a, (p-1)//2, p)
@@ -90,6 +93,9 @@ def legendre(a, p):
 
 def jacobi(a, p):
 	""" computes the jacobi symbol (a/p) """
+	if p == 2:
+		print("undefined")
+		return None
 	if a%p == 0:
 		return 0
 	if p%2 == 0:
