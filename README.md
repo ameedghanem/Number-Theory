@@ -20,3 +20,4 @@ I implemented various **Number Theory algorithms** such as:
  - solve [Pell equation](https://en.wikipedia.org/wiki/Pell%27s_equation)
  - [Sieve of Eratothenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
  - [Factorization](https://en.wikipedia.org/wiki/Integer_factorization)
+ - [Primality testing](https://en.wikipedia.org/wiki/Primality_test) using [Fermat's little theorem](https://en.wikipedia.org/wiki/Fermat%27s_little_theorem)
