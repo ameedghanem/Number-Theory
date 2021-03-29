@@ -28,6 +28,7 @@ I implemented in this module various algorithms taught in the number theory cour
 17) lcm
 18) sieve of eratosthenes
 19) factoring a number to it's prime factors
+20) Primality testing using Fermat's little theorem
 
 """
 
@@ -93,18 +94,15 @@ def legendre(a, p):
 
 def jacobi(a, p):
 	""" computes the jacobi symbol (a/p) """
-	if p == 2:
-		print("undefined")
-		return None
 	if a%p == 0:
 		return 0
 	if p%2 == 0:
 		print("p must be an odd")
 		return
 	sign = 1
-	factors = factorize(a)
+	factors = factorize(p)
 	for q, r in factors:
-		sign *= legendre(q, p)
+		sign *= legendre(a, q)
 	return sign
 
 
@@ -112,17 +110,20 @@ def sq_root(a, p):
 	if legendre(a, p) == -1:
 		return None
 	if p%4 == 3:
-		return my_pow(a, (p+1)//4, p)
-	return None
+		root = my_pow(a, (p+1)//4, p)
+		return root, p-root
+	return naive_sq_root(a, p)
 
 
 def naive_sq_root(a, p):
 	""" compues the square root of a modulo p """
-	sols = []
-	for i in range(p):
+	root1, root2 = 0, 0
+	if a == 0:
+		return 0
+	for i in range(1, p//2 + 1):
 		if i**2 % p == a:
-			sols.append(i)
-	return sols
+			root1, root2 = i, p-i
+	return root1, root2
 
 
 def inverse(a, p):
@@ -304,3 +305,11 @@ def factorize(n, to_print=False):
         print(int(n))       
     return factors
 
+
+def is_prime(p, rounds=100):
+	""" checks whether p is a prime number or not """
+	for i in range(100):
+		a = random.randint(1,p-1)
+		if pow2(a, p-1, p) != 1:
+			return False
+	return True
