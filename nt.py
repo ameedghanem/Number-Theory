@@ -41,7 +41,7 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    """ returns leam common multiplicity (lcm) of a and b """
+    """ returns least common multiplicity (lcm) of a and b """
     return a*b//gcd(a,b)
 
 
@@ -308,7 +308,7 @@ def factorize(n, to_print=False):
 
 def is_prime(p, rounds=100):
 	""" checks whether p is a prime number or not """
-	for i in range(100):
+	for i in range(rounds):
 		a = random.randint(1,p-1)
 		if pow2(a, p-1, p) != 1:
 			return False
