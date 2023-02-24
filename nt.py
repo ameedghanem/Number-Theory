@@ -3,7 +3,6 @@ import logging
 from math import floor
 
 """
-@Author: Ameed S. Ghanem
 
 
 Number Theory Algorithms.
